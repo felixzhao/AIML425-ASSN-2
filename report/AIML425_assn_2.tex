@@ -47,11 +47,28 @@
 \section{Introduction}
 \label{sec:intro}
 
-These guidelines include complete descriptions of the fonts, spacing, and
-related information for producing your proceedings manuscripts. Please follow
-them and if you have any questions, direct them to Conference Management
-Services, Inc.: Phone +1-979-846-6800 or email
-to \\\texttt{papers@2021.ieeeicassp.org}.
+Generative models are a subclass of machine learning models that aim to capture and reproduce the underlying distribution of the data they are trained on. They can generate new samples that are similar to the input data but not necessarily present in the training set. 
+
+In this work will show my understanding of traning and tuning generative models.
+
+There are three models will be trained. 
+
+First model $f1$ input following 2D Gaussian distribution
+and output following 2D uniform distribution.
+
+The second model $f2$ input is the output of model 1 
+and output follwoing 2D Gaussian distribution.
+
+The third model $f3$ input following 1D uniform distribution,
+and output follwing 2D Gaussian distribution.
+
+We introduced experiment to discuss 
+the efffect of the different levels of L2 regularization on the weights 
+for $f1$
+
+And the effect of the concatenate two networks $f1$ and $f2$.
+
+At last, we shows point mapping from input to output of model $f3$
 
 % Below is an example of how to insert images. Delete the ``\vspace'' line,
 % uncomment the preceding line ``\centerline...'' and replace ``imageX.ps''
