@@ -47,28 +47,25 @@
 \section{Introduction}
 \label{sec:intro}
 
-Generative models are a subclass of machine learning models that aim to capture and reproduce the underlying distribution of the data they are trained on. They can generate new samples that are similar to the input data but not necessarily present in the training set. 
+Generative models are a subset of machine learning models designed to capture and mimic the underlying distribution of the data on which they are trained. They can produce new samples that resemble the input data but might not have been part of the original training set.
 
-In this work will show my understanding of traning and tuning generative models.
+In this work, I will present my understanding of training and tuning generative models.
 
-There are three models will be trained. 
+Three models will be trained:
 
-First model $f1$ input following 2D Gaussian distribution
-and output following 2D uniform distribution.
+1. The first model, $f1$, has an input that follows a 2D Gaussian distribution and produces an output following a 2D uniform distribution.
 
-The second model $f2$ input is the output of model 1 
-and output follwoing 2D Gaussian distribution.
+2. The second model, $f2$, takes the output of model $f1$ as its input and produces an output that follows a 2D Gaussian distribution.
 
-The third model $f3$ input following 1D uniform distribution,
-and output follwing 2D Gaussian distribution.
+3. The third model, $f3$, accepts an input that follows a 1D uniform distribution and generates an output following a 2D Gaussian distribution.
 
-We introduced experiment to discuss 
-the efffect of the different levels of L2 regularization on the weights 
-for $f1$
+We have introduced experiments to discuss:
 
-And the effect of the concatenate two networks $f1$ and $f2$.
+  - The effects of varying levels of L2 regularization on the weights for $f1$.
+  
+  - The implications of concatenating the two networks, $f1$ and $f2$.
 
-At last, we shows point mapping from input to output of model $f3$
+Finally, we will showcase the point mapping from the input to the output of model $f3$.
 
 % Below is an example of how to insert images. Delete the ``\vspace'' line,
 % uncomment the preceding line ``\centerline...'' and replace ``imageX.ps''
