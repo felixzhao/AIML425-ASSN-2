@@ -103,13 +103,41 @@ Finally, we will showcase the point mapping from the input to the output of mode
 \section{THEORY}
 \label{sec:theory}
 
-All printed material, including text, illustrations, and charts, must be kept
-within a print area of 7 inches (178 mm) wide by 9 inches (229 mm) high. Do
-not write or print anything outside the print area. The top margin must be 1
-inch (25 mm), except for the title page, and the left margin must be 0.75 inch
-(19 mm).  All {\it text} must be in a two-column format. Columns are to be 3.39
-inches (86 mm) wide, with a 0.24 inch (6 mm) space between them. Text must be
-fully justified.
+\subsection{MMD}
+\label{ssec:mmd}
+
+Maximum Mean Discrepancy (MMD) is a statistical test for determining whether two samples come from the same distribution. It's often used in the context of kernel methods and has applications in training generative models.
+
+$ \text{MMD}^2 = E[k(x, x')] + E[k(y, y')] - 2E[k(x, y)] $
+
+where, $k(.,.)$ is the kernel function. 
+$x, x'$ are independent samples from $X$,
+and $y, y'$ are independent samples from $Y$.
+
+\subsubsection{Kernel}
+\label{sssec:kernel}
+
+A common choice of kernel for MMD is the Gaussian (RBF) kernel:
+
+$ k(x, y) = \exp\left(-\frac{||x - y||^2}{r}\right) $
+
+Where, $r$ is chosen by designer
+
+
+
+\subsection{L2 Regularization}
+\label{ssec:l2regularization}
+
+L2 regularization introduces a penalty on the squared magnitudes of model weights. 
+In Nerual Networks, the loss function with L2 regularization is:
+
+$ J(\theta) = \text{MMD}(\theta) + \lambda ||\theta||_2^2 $
+
+Where,
+
+- $\lambda$ is the regularization strength
+
+- $||\theta||_2^2$ is the L2 norm of the parameter vector.
 
 \section{RESULTS}
 \label{sec:results}
