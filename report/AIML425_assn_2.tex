@@ -241,7 +241,65 @@ Gaussian to Gaussian) with different $L2$ regularizations. Discuss the
 movement of adjacent points and the effect of the regularization.}
 \label{ssec:q4}
 
-pass
+In our preceding analysis, we discovered that the $f1$
+model using an with $L2$ weight of less than $1\times10^{-4}$ did not produce optimal outcomes
+Motivated by this, we turn our attention in this section to an evaluation of L2 weights at
+ $1\times10^{-4}$, $1\times10^{-5}$, $1\times10^{-7}$ and $1\times10^{-8}$.
+
+Please refer to Figure $\ref{fig:q4}$ which presents the genuine Z distribution. 
+Following this, Figures $\ref{fig:q4}$ b through $\ref{fig:q4}$ e 
+showcase predictions derived from the integrated $f2$ ◦ $f1$ model.
+
+From our observations, a smaller L2 weight in $f1$ 
+for the concatenated model corresponds to predictions distributed over a more confined range.
+In contrast, adopting a larger L2 weight gives predictions a wider spread, aligning them more accurately with the genuine distribution.
+
+An intriguing takeaway is that the L2 weight, 
+its influence isn't apparent in the standalone $f1$ model's training. 
+But, it plays a pivotal role in shaping the outcomes of the concatenated model.
+
+
+\begin{figure}[htb]
+  \begin{minipage}[b]{1.0\linewidth}
+    \centering
+    \centerline{\includegraphics[width=3.0cm]{images/q4_act}}
+   %\vspace{2.0cm}
+   \centerline{(a) actual distribution of Z }\medskip
+  \end{minipage}
+  %
+  \begin{minipage}[b]{.48\linewidth}
+    \centering
+    \centerline{\includegraphics[width=3.0cm]{images/q4_pred_1e-4}}
+  %  \vspace{1.5cm}
+    \centerline{(a) Points movement with 1e-4}\medskip
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.48\linewidth}
+    \centering
+    \centerline{\includegraphics[width=3.0cm]{images/q4_pred_1e-5}}
+  %  \vspace{1.5cm}
+    \centerline{(c) Points movement with 1e-5}\medskip
+  \end{minipage}
+  %
+  %
+  \begin{minipage}[b]{.48\linewidth}
+    \centering
+    \centerline{\includegraphics[width=3.0cm]{images/q4_pred_1e-7}}
+  %  \vspace{1.5cm}
+    \centerline{(d) Points movement with 1e-7}\medskip
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.48\linewidth}
+    \centering
+    \centerline{\includegraphics[width=3.0cm]{images/q4_pred_1e-8}}
+  %  \vspace{1.5cm}
+    \centerline{(e) Points movement with 1e-8}\medskip
+  \end{minipage}
+  %
+  \caption{visulization of dataset}
+  \label{fig:q4}
+  %
+  \end{figure}
 
 \subsection{Train a third network $f3$ that converts a 1D uniform $Y$ into a gaussian
 2D $Z$. Again use colour plots that show how points are mapped from
