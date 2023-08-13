@@ -143,6 +143,7 @@ a uniform density of 1 in a 2D square box (2-cube; edges have length 1).}
 A 3 fully-connected layers nerual network is been used train this model, 
 which use MMD is Loss function with Gaussian Kernel. 
 Gradient Descent Learning algorithms use Adam.
+Regularization method is L2 regularization.
 
 From Figure $\ref{fig:f1}$ we can see the input points are good mapping to the predicate points.
 
@@ -163,7 +164,10 @@ From Figure $\ref{fig:f1}$ we can see the input points are good mapping to the p
 \subsection{Train a second network $f2$ that converts the 2D $Y$ into a Gaussian 2D $Z$}
 \label{ssec:q2}
 
-pass
+A 3 fully-connected layers nerual network is been used train this model, 
+which use MMD is Loss function with Gaussian Kernel. 
+Gradient Descent Learning algorithms use Adam.
+Regularization method is Dropout.
 
 \subsection{Train $f1$ with different levels of $L2$ regularization on the weights and
 discuss the effect.}
