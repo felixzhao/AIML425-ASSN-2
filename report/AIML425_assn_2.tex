@@ -135,8 +135,10 @@ Where,
 \section{RESULTS}
 \label{sec:results}
 
-\subsection{model $f1$}
-\label{ssec:modelf1}
+\subsection{Train a fully connected neural network $f1$ of your design that converts a
+two-dimensional (2D) $Z \sim N (0, I)$ into a 2D uniform $Y$ . That is, $Y$ has
+a uniform density of 1 in a 2D square box (2-cube; edges have length 1).}
+\label{ssec:q1}
 
 A 3 fully-connected layers nerual network is been used train this model, 
 which use MMD is Loss function with Gaussian Kernel. 
@@ -158,13 +160,31 @@ From Figure $\ref{fig:f1}$ we can see the input points are good mapping to the p
   %
   \end{figure}
 
-The paper title (on the first page) should begin 1.38 inches (35 mm) from the
-top edge of the page, centered, completely capitalized, and in Times 14-point,
-boldface type.  The authors' name(s) and affiliation(s) appear below the title
-in capital and lower case letters.  Papers with multiple authors and
-affiliations may require two or more lines for this information. Please note
-that papers should not be submitted blind; include the authors' names on the
-PDF.
+\subsection{Train a second network $f2$ that converts the 2D $Y$ into a Gaussian 2D $Z$}
+\label{ssec:q2}
+
+pass
+
+\subsection{Train $f1$ with different levels of $L2$ regularization on the weights and
+discuss the effect.}
+\label{ssec:q3}
+
+waitting for code
+
+\subsection{Using colour plots (various options), discuss what happens to individual
+input data points if we concatenate two networks $f2$ ◦ $f1$ (mapping
+Gaussian to Gaussian) with different $L2$ regularizations. Discuss the
+movement of adjacent points and the effect of the regularization.}
+\label{ssec:q4}
+
+pass
+
+\subsection{Train a third network $f3$ that converts a 1D uniform $Y$ into a gaussian
+2D $Z$. Again use colour plots that show how points are mapped from
+the input $Y$ to the output $Z$}
+\label{ssec:q5}
+
+pass
 
 \section{CONCLUSION}
 \label{sec:conclusion}
