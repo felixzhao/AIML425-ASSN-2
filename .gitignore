@@ -170,3 +170,4 @@ report/*.gz
 report/*.pdf
 
 *.pdf
+*.png
