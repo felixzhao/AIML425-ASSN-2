@@ -82,7 +82,7 @@ Finally, we will showcase the point mapping from the input to the output of mode
   \hfill
   \begin{minipage}[c]{0.48\linewidth}
     \centering
-    \centerline{\includegraphics[width=2.7cm]{images/uniform2d.eps}}
+    \centerline{\includegraphics[width=2.7cm]{images/uniform2d}}
   %  \vspace{1.5cm}
     \centerline{(b) 2D uniform distribution}\medskip
   \end{minipage}
@@ -184,7 +184,40 @@ pass
 the input $Y$ to the output $Z$}
 \label{ssec:q5}
 
-pass
+We've trained the model $f3$, using a neural network that consists of three fully-connected layers. To evaluate the model's performance, we employed the Maximum Mean Discrepancy (MMD) with a Gaussian Kernel as the loss function. The training process utilized the Gradient Descent algorithm, more specifically, the Adam optimizer. To mitigate overfitting and enhance generalization, we incorporated the Dropout method for regularization.
+
+In Figure $\ref{fig:q5}$, The left plot presents the mapping of points from input 
+$Y$ to output $Z$.
+Conversely, the right plot highlights the mapping from input 
+$Y$ to a stage preceding $Z$.
+While both distributions — the output and its precursor — seem superficially similar, a closer examination reveals pronounced differences in their point mappings. The pattern in 
+Figure $\ref{fig:q5}$ a seems largely arbitrary. However, 
+Figure $\ref{fig:q5}$ b presents a discernible trend: positive values gravitate toward the upper left, while negative values shift to the lower right.
+
+Such observations underscore the value of point mapping plots. They serve as diagnostic tools, offering insights into potential challenges encountered during model training.
+
+
+
+\begin{figure}[htb]
+  %
+  \begin{minipage}[a]{.48\linewidth}
+    \centering
+    \centerline{\includegraphics[width=3.0cm]{images/q5_1}}
+  %  \vspace{1.5cm}
+    \centerline{(a) mapping of output}\medskip
+  \end{minipage}
+  \hfill
+  \begin{minipage}[c]{0.48\linewidth}
+    \centering
+    \centerline{\includegraphics[width=3.0cm]{images/q5_2}}
+  %  \vspace{1.5cm}
+    \centerline{(b) mapping of prediction}\medskip
+  \end{minipage}
+  %
+  \caption{Points mapped of Model 3}
+  \label{fig:q5}
+  %
+  \end{figure}
 
 \section{CONCLUSION}
 \label{sec:conclusion}
@@ -212,20 +245,6 @@ Major headings, \cite{Lamp86} for example, "1. Introduction", should appear in a
 letters, bold face if possible, centered in the column, with one blank line
 before, and one blank line after. Use a period (".") after the heading number,
 not a colon.
-
-\subsection{Subheadings}
-\label{ssec:subhead}
-
-Subheadings should appear in lower case (initial word capitalized) in
-boldface.  They should start at the left margin on a separate line.
- 
-\subsubsection{Sub-subheadings}
-\label{sssec:subsubhead}
-
-Sub-subheadings, as in this paragraph, are discouraged. However, if you
-must use them, they should appear in lower case (initial word
-capitalized) and start at the left margin on a separate line, with paragraph
-text beginning on the following line.  They should be in italics.
 
 % To start a new column (but not a new page) and help balance the last-page
 % column length use \vfill\pagebreak.
