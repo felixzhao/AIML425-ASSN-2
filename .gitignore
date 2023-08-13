@@ -171,3 +171,4 @@ report/*.pdf
 
 *.pdf
 *.png
+*.out
