@@ -1,16 +1,15 @@
 #!/bin/bash
 
 # Check if two arguments are provided
-if [ "$#" -ne 2 ]; then
-    echo "Usage: $0 <number1> <number2>"
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 <str1>"
     exit 1
 fi
 
 # Assign arguments to variables
-input=$1
-output=$2
+filename=$1
 
-magick convert $input $output
+magick convert "${filename}.png" "${filename}.eps"
 
 # Print the result
 echo done
