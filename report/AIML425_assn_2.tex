@@ -99,7 +99,7 @@ Finally, we will showcase the point mapping from the input to the output of mode
 \subsection{MMD}
 \label{ssec:mmd}
 
-Maximum Mean Discrepancy (MMD) is a statistical test for determining whether two samples come from the same distribution. It's often used in the context of kernel methods and has applications in training generative models.
+Maximum Mean Discrepancy (MMD) \cite{gretton2012kernel} is a statistical test for determining whether two samples come from the same distribution. It's often used in the context of kernel methods and has applications in training generative models.
 
 $ \text{MMD}^2 = E[k(x, x')] + E[k(y, y')] - 2E[k(x, y)] $
 
@@ -121,7 +121,7 @@ Where, $r$ is chosen by designer
 \subsection{L2 Regularization}
 \label{ssec:l2regularization}
 
-L2 regularization introduces a penalty on the squared magnitudes of model weights. 
+L2 regularization \cite{rumelhart1986learning} introduces a penalty on the squared magnitudes of model weights. 
 In Nerual Networks, the loss function with L2 regularization is:
 
 $ J(\theta) = \text{MMD}(\theta) + \lambda ||\theta||_2^2 $
@@ -348,29 +348,17 @@ Such observations underscore the value of point mapping plots. They serve as dia
 \section{CONCLUSION}
 \label{sec:conclusion}
 
-To achieve {\bf not} the best rendering both in printed proceedings and electronic proceedings, we
-strongly encourage you to use Times-Roman font.  In addition, this will give
-the proceedings a more uniform look.  Use a font that is no smaller than nine
-point type throughout the paper, including figure captions.
-
-In nine point type font, capital letters are 2 mm high.  {\bf If you use the
-smallest point size, there should be no more than 3.2 lines/cm (8 lines/inch)
-vertically.}  This is a minimum spacing; 2.75 lines/cm (7 lines/inch) will make
-the paper much more readable.  Larger type sizes require correspondingly larger
-vertical spacing.  Please do not double-space your paper.  TrueType or
-Postscript Type 1 fonts are preferred.
-
-The first paragraph in each section should not be indented, but all the
-following paragraphs within the section should be indented as these paragraphs
-demonstrate.
+From our experimental findings, we determined that color plots are valuable for indicating results in generative models. 
+The regularization weight significantly impacts model performance. 
+In the concatenated model, the weight of the initial model influences the entire concatenated model's results, even though this weight might not have a pronounced effect on the first model in isolation.
 
 \section{STATEMENT OF ALL TOOLS USED}
 \label{sec:statementofalltoolsused}
 
-Major headings, \cite{Lamp86} for example, "1. Introduction", should appear in all capital
-letters, bold face if possible, centered in the column, with one blank line
-before, and one blank line after. Use a period (".") after the heading number,
-not a colon.
+In this work, we used Pytorch to create, train, and evaluate the model. 
+The Plotly package helped us visualize in 3D. 
+We used scipy.stats to generate the random variables.
+
 
 % To start a new column (but not a new page) and help balance the last-page
 % column length use \vfill\pagebreak.
