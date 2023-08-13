@@ -169,7 +169,71 @@ pass
 discuss the effect.}
 \label{ssec:q3}
 
-waitting for code
+We conducted experiments using the $f1$ model by adjusting the $L2$ regularization values. 
+The specific values tested were: 
+
+$
+1\times 10^{-1}, 1\times 10^{-2}, 
+1\times 10^{-3}, 1\times 10^{-4}, 1\times 10^{-5}, 
+1\times 10^{-6}, 1\times 10^{-7}, 1\times 10^{-8}, 
+1\times 10^{-10}, 1\times 10^{-15}, 1\times 10^{-20} 
+$ 
+
+Figure $\ref{fig:q3}$ a highlights the behavior of 
+the average loss across these regularization values. 
+There's a pronounced reduction in loss after 
+$1\times 10^{-2}$. However, post 
+$1\times 10^{-4}$, the loss remains relatively stable without significant fluctuations.
+
+The evolution in point mapping becomes evident when examining 
+Figures $\ref{fig:q3}$ b through $\ref{fig:q3}$  e, it shows point mapping to one point,
+after weight increased it teand to mapping to a line.
+
+after $1\times 10^{-4}$, input points have good mapping shape is stable and same to output shape.
+
+
+\begin{figure}[htb]
+
+  \begin{minipage}[b]{1.0\linewidth}
+    \centering
+    \centerline{\includegraphics[width=8.0cm]{images/q3_1}}
+   %\vspace{2.0cm}
+   \centerline{(a) $f1$ Avg Loss with diff L2 weight decay }\medskip
+  \end{minipage}
+  %
+  \begin{minipage}[b]{.48\linewidth}
+    \centering
+    \centerline{\includegraphics[width=3.0cm]{images/q3_1e-2}}
+  %  \vspace{1.5cm}
+    \centerline{(b) Points movement with 1e-2}\medskip
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.48\linewidth}
+    \centering
+    \centerline{\includegraphics[width=3.0cm]{images/q3_1e-3}}
+  %  \vspace{1.5cm}
+    \centerline{(c) Points movement with 1e-3}\medskip
+  \end{minipage}
+  %
+  %
+  \begin{minipage}[b]{.48\linewidth}
+    \centering
+    \centerline{\includegraphics[width=3.0cm]{images/q3_1e-4}}
+  %  \vspace{1.5cm}
+    \centerline{(d) Points movement with 1e-4}\medskip
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.48\linewidth}
+    \centering
+    \centerline{\includegraphics[width=3.0cm]{images/q3_1e-5}}
+  %  \vspace{1.5cm}
+    \centerline{(e) Points movement with 1e-5}\medskip
+  \end{minipage}
+  %
+  \caption{visulization of dataset}
+  \label{fig:q3}
+  %
+  \end{figure}
 
 \subsection{Using colour plots (various options), discuss what happens to individual
 input data points if we concatenate two networks $f2$ ◦ $f1$ (mapping

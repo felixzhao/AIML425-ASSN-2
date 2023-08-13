@@ -168,3 +168,5 @@ report/*.fdb_latexmk
 report/*.fls
 report/*.gz
 report/*.pdf
+
+*.pdf
