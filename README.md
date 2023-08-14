@@ -11,6 +11,7 @@ Question 2: https://github.com/felixzhao/AIML425-ASSN-2/blob/main/AIML425_Assn_2
 Question 3: https://github.com/felixzhao/AIML425-ASSN-2/blob/main/AIML425_Assn_2_Q3.ipynb
 
 Question 4: 
+the only difference of question 4 notebooks are value of f1 L2 weight.
 https://github.com/felixzhao/AIML425-ASSN-2/blob/main/AIML425_Assn_2_Q4_1e-04.ipynb
 https://github.com/felixzhao/AIML425-ASSN-2/blob/main/AIML425_Assn_2_Q4_1e-05.ipynb
 https://github.com/felixzhao/AIML425-ASSN-2/blob/main/AIML425_Assn_2_Q4_1e-07.ipynb
